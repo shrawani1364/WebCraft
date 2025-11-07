@@ -239,61 +239,30 @@
     </section>
 
     <!-- Templates Section -->
-    <section id="templates" class="templates-section">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-badge">Templates</span>
-                <h2 class="section-title">Choose Your Perfect Template</h2>
-                <p class="section-description">Start with a professionally designed template and make it yours. All templates are fully customizable and responsive.</p>
-            </div>
-            <div class="templates-grid">
-                <!-- Template 1: Business -->
-                <div class="template-card" data-template="business">
-                    <div class="template-image" style="background: linear-gradient(135deg, #1e293b 0%, #3b82f6 100%); position: relative; overflow: hidden;">
-                        <div class="template-mockup">
-                            <div class="mockup-header" style="background: rgba(255,255,255,0.12); height: 60px; display: flex; align-items: center; padding: 0 25px; gap: 15px; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                                <div style="width: 45px; height: 45px; background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <div style="width: 25px; height: 3px; background: #3b82f6; border-radius: 2px;"></div>
-                                </div>
-                                <div style="flex: 1; display: flex; gap: 20px; justify-content: flex-end;">
-                                    <div style="height: 8px; background: rgba(255,255,255,0.3); border-radius: 4px; width: 50px;"></div>
-                                    <div style="height: 8px; background: rgba(255,255,255,0.3); border-radius: 4px; width: 50px;"></div>
-                                    <div style="height: 8px; background: rgba(255,255,255,0.9); border-radius: 4px; width: 50px;"></div>
-                                </div>
-                            </div>
-                            <div style="padding: 35px 25px;">
-                                <div style="height: 18px; background: rgba(255,255,255,0.5); border-radius: 5px; margin-bottom: 10px; width: 75%;"></div>
-                                <div style="height: 10px; background: rgba(255,255,255,0.25); border-radius: 4px; margin-bottom: 8px; width: 90%;"></div>
-                                <div style="height: 10px; background: rgba(255,255,255,0.25); border-radius: 4px; margin-bottom: 25px; width: 85%;"></div>
-                                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
-                                    <div style="background: rgba(255,255,255,0.18); border-radius: 12px; padding: 15px; border: 1px solid rgba(255,255,255,0.2);">
-                                        <div style="width: 35px; height: 35px; background: linear-gradient(135deg, rgba(59,130,246,0.8) 0%, rgba(37,99,235,0.9) 100%); border-radius: 8px; margin-bottom: 10px;"></div>
-                                        <div style="height: 6px; background: rgba(255,255,255,0.4); border-radius: 3px; width: 70%; margin-bottom: 5px;"></div>
-                                        <div style="height: 5px; background: rgba(255,255,255,0.25); border-radius: 3px; width: 90%;"></div>
-                                    </div>
-                                    <div style="background: rgba(255,255,255,0.18); border-radius: 12px; padding: 15px; border: 1px solid rgba(255,255,255,0.2);">
-                                        <div style="width: 35px; height: 35px; background: linear-gradient(135deg, rgba(99,102,241,0.8) 0%, rgba(79,70,229,0.9) 100%); border-radius: 8px; margin-bottom: 10px;"></div>
-                                        <div style="height: 6px; background: rgba(255,255,255,0.4); border-radius: 3px; width: 70%; margin-bottom: 5px;"></div>
-                                        <div style="height: 5px; background: rgba(255,255,255,0.25); border-radius: 3px; width: 90%;"></div>
-                                    </div>
-                                    <div style="background: rgba(255,255,255,0.18); border-radius: 12px; padding: 15px; border: 1px solid rgba(255,255,255,0.2);">
-                                        <div style="width: 35px; height: 35px; background: linear-gradient(135deg, rgba(139,92,246,0.8) 0%, rgba(124,58,237,0.9) 100%); border-radius: 8px; margin-bottom: 10px;"></div>
-                                        <div style="height: 6px; background: rgba(255,255,255,0.4); border-radius: 3px; width: 70%; margin-bottom: 5px;"></div>
-                                        <div style="height: 5px; background: rgba(255,255,255,0.25); border-radius: 3px; width: 90%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="template-overlay">
-                            <button class="btn-preview" onclick="selectTemplate('business')">
+<section id="templates" class="templates-section">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-badge">Templates</span>
+      <h2 class="section-title">Choose Your Template</h2>
+      <p class="section-description">Click to preview & edit your favorite design</p>
+    </div>
+
+    <div class="templates-grid">
+
+      <!-- Business Template -->
+      <div class="template-card" onclick="selectTemplate('business')">
+        <div class="template-image">
+          <img src="https://psd.graphics/wp-content/uploads/2016/02/Professional-Business-Website-Template-Free-PSD-preview2.jpg" class="template-mockup" alt="Business Template">
+          <div class="template-overlay">
+                            <button class="btn-preview" onclick="selectTemplate('restaurant')">
                                 Select Template
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
-                    </div>
-                    <div class="template-info">
+        </div>
+        <div class="template-info">
                         <div class="template-header">
                             <h3>Business Professional</h3>
                             <span class="template-badge popular">Popular</span>
@@ -306,33 +275,22 @@
                             <span class="feature-tag">Contact</span>
                         </div>
                     </div>
-                </div>
+      </div>
 
-                <!-- Template 2: Portfolio -->
-                <div class="template-card" data-template="portfolio">
-                    <div class="template-image" style="background: linear-gradient(135deg, #be123c 0%, #f97316 100%); position: relative; overflow: hidden;">
-                        <div class="template-mockup">
-                            <div style="padding: 40px 30px; text-align: center;">
-                                <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.3); border-radius: 50%; margin: 0 auto 20px; border: 4px solid rgba(255,255,255,0.5);"></div>
-                                <div style="height: 14px; background: rgba(255,255,255,0.4); border-radius: 4px; margin: 0 auto 10px; width: 60%;"></div>
-                                <div style="height: 8px; background: rgba(255,255,255,0.2); border-radius: 4px; margin: 0 auto 30px; width: 50%;"></div>
-                                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
-                                    <div style="height: 60px; background: rgba(255,255,255,0.2); border-radius: 8px;"></div>
-                                    <div style="height: 60px; background: rgba(255,255,255,0.2); border-radius: 8px;"></div>
-                                    <div style="height: 60px; background: rgba(255,255,255,0.2); border-radius: 8px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="template-overlay">
-                            <button class="btn-preview" onclick="selectTemplate('portfolio')">
+      <!-- Portfolio Template -->
+      <div class="template-card" onclick="selectTemplate('portfolio')">
+        <div class="template-image">
+          <img src="https://w3layouts.com/wp-content/uploads/2023/10/UI-Portfolio-Website-Template-scaled-1.jpg" class="template-mockup" alt="Portfolio Template">
+          <div class="template-overlay">
+                            <button class="btn-preview" onclick="selectTemplate('restaurant')">
                                 Select Template
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
-                    </div>
-                    <div class="template-info">
+        </div>
+        <div class="template-info">
                         <div class="template-header">
                             <h3>Creative Portfolio</h3>
                             <span class="template-badge creative">Creative</span>
@@ -345,30 +303,22 @@
                             <span class="feature-tag">Skills</span>
                         </div>
                     </div>
-                </div>
+      </div>
 
-                <!-- Template 3: Blog -->
-                <div class="template-card" data-template="blog">
-                    <div class="template-image" style="background: linear-gradient(135deg, #0891b2 0%, #10b981 100%); position: relative; overflow: hidden;">
-                        <div class="template-mockup">
-                            <div style="padding: 30px;">
-                                <div style="height: 14px; background: rgba(255,255,255,0.4); border-radius: 4px; margin-bottom: 15px; width: 70%;"></div>
-                                <div style="height: 120px; background: rgba(255,255,255,0.2); border-radius: 12px; margin-bottom: 20px;"></div>
-                                <div style="height: 8px; background: rgba(255,255,255,0.3); border-radius: 4px; margin-bottom: 8px; width: 95%;"></div>
-                                <div style="height: 8px; background: rgba(255,255,255,0.3); border-radius: 4px; margin-bottom: 8px; width: 90%;"></div>
-                                <div style="height: 8px; background: rgba(255,255,255,0.3); border-radius: 4px; width: 60%;"></div>
-                            </div>
-                        </div>
-                        <div class="template-overlay">
-                            <button class="btn-preview" onclick="selectTemplate('blog')">
+      <!-- Blog Template -->
+      <div class="template-card" onclick="selectTemplate('blog')">
+        <div class="template-image">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.DTiU0MpbfUkMt5fK04evcwHaGB?pid=Api&P=0&h=180" class="template-mockup" alt="Blog Template">
+          <div class="template-overlay">
+                            <button class="btn-preview" onclick="selectTemplate('restaurant')">
                                 Select Template
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
-                    </div>
-                    <div class="template-info">
+        </div>
+        <div class="template-info">
                         <div class="template-header">
                             <h3>Modern Blog</h3>
                             <span class="template-badge trending">Trending</span>
@@ -381,35 +331,22 @@
                             <span class="feature-tag">Newsletter</span>
                         </div>
                     </div>
-                </div>
+      </div>
 
-                <!-- Template 4: Landing Page -->
-                <div class="template-card" data-template="landing">
-                    <div class="template-image" style="background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%); position: relative; overflow: hidden;">
-                        <div class="template-mockup">
-                            <div style="padding: 40px 30px; text-align: center;">
-                                <div style="height: 18px; background: rgba(255,255,255,0.5); border-radius: 4px; margin: 0 auto 15px; width: 65%;"></div>
-                                <div style="height: 10px; background: rgba(255,255,255,0.3); border-radius: 4px; margin: 0 auto 25px; width: 80%;"></div>
-                                <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 25px;">
-                                    <div style="width: 80px; height: 35px; background: rgba(255,255,255,0.9); border-radius: 8px;"></div>
-                                    <div style="width: 80px; height: 35px; background: rgba(255,255,255,0.2); border-radius: 8px; border: 2px solid rgba(255,255,255,0.5);"></div>
-                                </div>
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                                    <div style="height: 70px; background: rgba(255,255,255,0.15); border-radius: 10px;"></div>
-                                    <div style="height: 70px; background: rgba(255,255,255,0.15); border-radius: 10px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="template-overlay">
-                            <button class="btn-preview" onclick="selectTemplate('landing')">
+      <!-- Landing Page Template -->
+      <div class="template-card" onclick="selectTemplate('landing')">
+        <div class="template-image">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.pH4cogyNWv5ii6rOZu4cVAHaD8?pid=Api&P=0&h=180" class="template-mockup" alt="Landing Page Template">
+          <div class="template-overlay">
+                            <button class="btn-preview" onclick="selectTemplate('restaurant')">
                                 Select Template
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
-                    </div>
-                    <div class="template-info">
+        </div>
+        <div class="template-info">
                         <div class="template-header">
                             <h3>Product Landing</h3>
                             <span class="template-badge converting">High Converting</span>
@@ -422,29 +359,13 @@
                             <span class="feature-tag">FAQ</span>
                         </div>
                     </div>
-                </div>
+      </div>
 
-                <!-- Template 5: Restaurant -->
-                <div class="template-card" data-template="restaurant">
-                    <div class="template-image" style="background: linear-gradient(135deg, #c2410c 0%, #991b1b 100%); position: relative; overflow: hidden;">
-                        <div class="template-mockup">
-                            <div style="padding: 30px; text-align: center;">
-                                <div style="height: 16px; background: rgba(255,255,255,0.5); border-radius: 4px; margin: 0 auto 10px; width: 55%;"></div>
-                                <div style="height: 8px; background: rgba(255,255,255,0.3); border-radius: 4px; margin: 0 auto 25px; width: 70%;"></div>
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
-                                    <div style="height: 70px; background: rgba(255,255,255,0.2); border-radius: 10px; padding: 12px;">
-                                        <div style="height: 6px; background: rgba(255,255,255,0.4); border-radius: 3px; margin-bottom: 8px; width: 70%;"></div>
-                                        <div style="height: 5px; background: rgba(255,255,255,0.3); border-radius: 3px; width: 90%;"></div>
-                                    </div>
-                                    <div style="height: 70px; background: rgba(255,255,255,0.2); border-radius: 10px; padding: 12px;">
-                                        <div style="height: 6px; background: rgba(255,255,255,0.4); border-radius: 3px; margin-bottom: 8px; width: 70%;"></div>
-                                        <div style="height: 5px; background: rgba(255,255,255,0.3); border-radius: 3px; width: 90%;"></div>
-                                    </div>
-                                </div>
-                                <div style="height: 80px; background: rgba(255,255,255,0.15); border-radius: 12px;"></div>
-                            </div>
-                        </div>
-                        <div class="template-overlay">
+      <!-- Restaurant Template -->
+      <div class="template-card" onclick="selectTemplate('restaurant')">
+        <div class="template-image">
+          <img src="https://i.ytimg.com/vi/ajtLKcOF7RM/maxresdefault.jpg" class="template-mockup" alt="Restaurant Template">
+          <div class="template-overlay">
                             <button class="btn-preview" onclick="selectTemplate('restaurant')">
                                 Select Template
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -452,8 +373,8 @@
                                 </svg>
                             </button>
                         </div>
-                    </div>
-                    <div class="template-info">
+        </div>
+        <div class="template-info">
                         <div class="template-header">
                             <h3>Restaurant & Cafe</h3>
                             <span class="template-badge food">Food & Dining</span>
@@ -466,43 +387,23 @@
                             <span class="feature-tag">Location</span>
                         </div>
                     </div>
-                </div>
+      </div>
 
-                <!-- Template 6: E-commerce (NEW) -->
-                <div class="template-card" data-template="ecommerce">
-                    <div class="template-image" style="background: linear-gradient(135deg, #0891b2 0%, #6366f1 100%); position: relative; overflow: hidden;">
-                        <div class="template-mockup">
-                            <div style="padding: 30px;">
-                                <div style="height: 14px; background: rgba(255,255,255,0.4); border-radius: 4px; margin-bottom: 25px; width: 60%;"></div>
-                                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 20px;">
-                                    <div style="background: rgba(255,255,255,0.2); border-radius: 10px; padding: 8px;">
-                                        <div style="height: 50px; background: rgba(255,255,255,0.3); border-radius: 6px; margin-bottom: 8px;"></div>
-                                        <div style="height: 6px; background: rgba(255,255,255,0.4); border-radius: 3px; margin-bottom: 5px; width: 70%;"></div>
-                                        <div style="height: 5px; background: rgba(255,255,255,0.3); border-radius: 3px; width: 50%;"></div>
-                                    </div>
-                                    <div style="background: rgba(255,255,255,0.2); border-radius: 10px; padding: 8px;">
-                                        <div style="height: 50px; background: rgba(255,255,255,0.3); border-radius: 6px; margin-bottom: 8px;"></div>
-                                        <div style="height: 6px; background: rgba(255,255,255,0.4); border-radius: 3px; margin-bottom: 5px; width: 70%;"></div>
-                                        <div style="height: 5px; background: rgba(255,255,255,0.3); border-radius: 3px; width: 50%;"></div>
-                                    </div>
-                                    <div style="background: rgba(255,255,255,0.2); border-radius: 10px; padding: 8px;">
-                                        <div style="height: 50px; background: rgba(255,255,255,0.3); border-radius: 6px; margin-bottom: 8px;"></div>
-                                        <div style="height: 6px; background: rgba(255,255,255,0.4); border-radius: 3px; margin-bottom: 5px; width: 70%;"></div>
-                                        <div style="height: 5px; background: rgba(255,255,255,0.3); border-radius: 3px; width: 50%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="template-overlay">
-                            <button class="btn-preview" onclick="selectTemplate('ecommerce')">
+      <!-- E-Commerce Template -->
+      <div class="template-card" onclick="selectTemplate('ecommerce')">
+        <div class="template-image">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.4pm1olIMoMYUBCJ3RR0-mQAAAA?pid=Api&P=0&h=180" class="template-mockup" alt="E-Commerce Template">
+          <div class="template-overlay">
+                            <button class="btn-preview" onclick="selectTemplate('restaurant')">
                                 Select Template
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
-                    </div>
-                    <div class="template-info">
+        </div>
+        
+        <div class="template-info">
                         <div class="template-header">
                             <h3>E-commerce Store</h3>
                             <span class="template-badge new">New</span>
@@ -515,10 +416,11 @@
                             <span class="feature-tag">Catalog</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- About Section -->
     <section id="about" class="about-section">
