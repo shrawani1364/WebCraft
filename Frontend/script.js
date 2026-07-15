@@ -639,3 +639,76 @@ console.log('  ESC - Close modal or deselect element');
 console.log('  Ctrl/Cmd + S - Download website');
 console.log('  Ctrl/Cmd + K - View code');
 console.log('  Delete - Reset selected element');
+
+// ============================================================
+// Atelier UI enhancements: 3D hero parallax + scroll reveals
+// ============================================================
+document.addEventListener('DOMContentLoaded', function () {
+    // --- 3D mouse-parallax tilt on the hero stage ---
+    var heroVisual = document.getElementById('heroVisual');
+    var stage = document.getElementById('heroVisualStage');
+
+    if (heroVisual && stage) {
+        var targetX = 0, targetY = 0, currentX = 0, currentY = 0;
+        var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        heroVisual.addEventListener('mousemove', function (e) {
+            if (reduceMotion) return;
+            var rect = heroVisual.getBoundingClientRect();
+            var px = (e.clientX - rect.left) / rect.width - 0.5;
+            var py = (e.clientY - rect.top) / rect.height - 0.5;
+            targetY = px * 16;
+            targetX = py * -16;
+        });
+
+        heroVisual.addEventListener('mouseleave', function () {
+            targetX = 0;
+            targetY = 0;
+        });
+
+        function animateStage() {
+            currentX += (targetX - currentX) * 0.08;
+            currentY += (targetY - currentY) * 0.08;
+            if (!reduceMotion) {
+                stage.style.transform = 'rotateX(' + currentX + 'deg) rotateY(' + currentY + 'deg)';
+            }
+            requestAnimationFrame(animateStage);
+        }
+        animateStage();
+    }
+
+    // --- Scroll-triggered reveal for cards and section content ---
+    var revealSelectors = [
+        '.feature-card',
+        '.template-card',
+        '.pricing-card',
+        '.about-feature',
+        '.stat-card',
+        '.about-content > *'
+    ];
+    var revealEls = document.querySelectorAll(revealSelectors.join(','));
+
+    revealEls.forEach(function (el, i) {
+        el.classList.add('reveal');
+        el.style.transitionDelay = (i % 6) * 60 + 'ms';
+    });
+
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        revealEls.forEach(function (el) {
+            observer.observe(el);
+        });
+    } else {
+        revealEls.forEach(function (el) {
+            el.classList.add('is-visible');
+        });
+    }
+});
